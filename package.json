@@ -1,0 +1,19 @@
+{
+  "name": "my-app",
+  "private": true,
+  "packageManager": "pnpm@10.26.1",
+  "scripts": {
+    "dev": "pnpm --filter @my-app/shared build && turbo run dev",
+    "build": "turbo run build",
+    "build:shared": "pnpm --filter @my-app/shared build",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "dev:api": "pnpm build:shared && turbo run dev --filter=api --filter=@my-app/shared",
+    "dev:web": "pnpm build:shared && turbo run dev --filter=web --filter=@my-app/shared",
+    "dev:admin": "pnpm build:shared && turbo run dev --filter=admin --filter=@my-app/shared"
+  },
+  "devDependencies": {
+    "turbo": "latest",
+    "typescript": "^5.3.0"
+  }
+}

@@ -1,0 +1,14 @@
+export const API_ENDPOINTS = {
+  AUTH: {
+    LOGIN: '/auth/login',
+    REGISTER: '/auth/register',
+    LOGOUT: '/auth/logout',
+    REFRESH: '/auth/refresh',
+    ME: '/auth/me',
+  },
+  USERS: {
+    LIST: '/users',
+    BY_ID: (id: string) => `/users/${id}`,
+    UPDATE_STATUS: (id: string) => `/users/${id}/status`,
+  },
+} as const;
