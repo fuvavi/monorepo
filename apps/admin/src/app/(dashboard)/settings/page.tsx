@@ -1,12 +1,21 @@
-'use client';
+"use client";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@monorepo/ui";
 
 export default function SettingsPage() {
   return (
-    <div className="p-8">
-      <h1 className="text-2xl font-bold mb-6">Cài đặt</h1>
-      <div className="bg-white rounded-xl p-6 shadow-sm">
-        <p className="text-gray-500">Chưa có cài đặt nào.</p>
-      </div>
+    <div className="space-y-6">
+      <header>
+        <h1 className="text-foreground text-2xl font-bold">Cài đặt</h1>
+        <p className="text-muted-foreground mt-2 text-sm">Cấu hình hệ thống.</p>
+      </header>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Chưa có cài đặt</CardTitle>
+          <CardDescription>Các tuỳ chọn cấu hình sẽ xuất hiện tại đây.</CardDescription>
+        </CardHeader>
+        <CardContent />
+      </Card>
     </div>
   );
 }
